@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mamta Bhojanalaya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">🍽️ Mamta Bhojanalaya</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
+    <h1>Welcome to Mamta Bhojanalaya</h1>
+    <p>Delicious Food • Affordable Prices • Best Taste</p>
+    <button id="orderBtn">Order Now</button>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Mamta Bhojanalaya offers fresh, hygienic and delicious meals.
+        We serve a variety of paneer dishes, dal, rice, roti and traditional Indian food at affordable prices.
+    </p>
+</section>
+
+<section id="gallery">
+    <h2>Food Gallery</h2>
+
+    <div class="gallery">
+        <img src="images/food1.jpg" alt="">
+        <img src="images/food2.jpg" alt="">
+        <img src="images/food3.jpg" alt="">
+        <img src="images/food4.jpg" alt="">
+        <img src="images/food5.jpg" alt="">
+        <img src="images/food6.jpg" alt="">
+        <img src="images/food7.jpg" alt="">
+        <img src="images/food8.jpg" alt="">
+    </div>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+        <div class="card">
+            <h3>Paneer</h3>
+            <p>Matar Paneer - ₹80 / ₹120</p>
+            <p>Kaju Paneer - ₹120 / ₹170</p>
+            <p>Sahi Paneer - ₹80 / ₹120</p>
+            <p>Chola Paneer - ₹80 / ₹120</p>
+            <p>Kaju Kari - ₹100 / ₹150</p>
+        </div>
+
+        <div class="card">
+            <h3>Dal</h3>
+            <p>Dal Fry - ₹60 / ₹90</p>
+            <p>Dal Tadka - ₹70 / ₹100</p>
+            <p>Dal Paneer - ₹70 / ₹100</p>
+        </div>
+
+        <div class="card">
+            <h3>Rice</h3>
+            <p>Plain Rice - ₹30 / ₹50</p>
+            <p>Jeera Rice - ₹40 / ₹60</p>
+            <p>Masala Rice - ₹50 / ₹70</p>
+            <p>Lapeta - ₹60 / ₹90</p>
+        </div>
+
+        <div class="card">
+            <h3>Sabji</h3>
+            <p>Sev Masala - ₹60 / ₹90</p>
+            <p>Sev Bhaji - ₹70 / ₹100</p>
+            <p>Sev Tamatar - ₹60 / ₹90</p>
+            <p>Tamatar Masala - ₹60 / ₹90</p>
+        </div>
+
+        <div class="card">
+            <h3>Roti</h3>
+            <p>Tawa Roti - ₹6</p>
+            <p>Tawa Butter Roti - ₹8</p>
+            <p>Tandoori Roti - ₹7</p>
+            <p>Tandoori Butter Roti - ₹8</p>
+            <p>Lachha Paratha - ₹25</p>
+        </div>
+
+        <div class="card">
+            <h3>Other Items</h3>
+            <p>Papad Dry - ₹20</p>
+            <p>Papad Masala - ₹30</p>
+            <p>Bati - ₹10</p>
+            <p>Dahi - ₹30 / ₹50</p>
+            <p>Water Bottle - ₹10 / ₹20</p>
+        </div>
+
+    </div>
+   <div class="menu-grid">
+    </div>
+     <h2 style="margin-top:50px;">Place Your Order</h2>
+
+<div class="order-box">
+    <input type="text" id="customerName" placeholder="Enter Your Name" required>
+
+<input type="tel" id="customerPhone" placeholder="Enter Phone Number" required>
+
+<textarea id="customerAddress"
+placeholder="Enter Delivery Address"
+rows="4"
+required></textarea>
+<select id="food">
+    <option value="80">Matar Paneer - ₹80</option>
+    <option value="120">Kaju Paneer - ₹120</option>
+    <option value="60">Dal Fry - ₹60</option>
+    <option value="30">Plain Rice - ₹30</option>
+    <option value="25">Lachha Paratha - ₹25</option>
+</select>
+
+<input type="number" id="qty" min="1" value="1">
+
+<button onclick="addToCart()">Add To Cart</button>
+
+<div id="cart"></div>
+
+<h3 id="total">Total: ₹0</h3>
+
+<button onclick="placeOrder()" class="order-btn">
+Place Order
+</button>
+
+</div>
+<section id="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-form">
+
+<input type="text" id="reviewName"
+placeholder="Your Name">
+
+<textarea id="reviewText"
+placeholder="Write your review"></textarea>
+
+<button onclick="addReview()">
+Submit Review
+</button>
+
+</div>
+
+<div id="reviewContainer">
+
+<div class="review">
+<strong>Rahul</strong>
+<p>⭐⭐⭐⭐⭐ Amazing food and service!</p>
+</div>
+
+<div class="review">
+<strong>Priya</strong>
+<p>⭐⭐⭐⭐⭐ Delicious dishes and affordable prices.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>📞 +91 1234567890</p>
+    <p>📧 info@mamtabhojanalaya.com</p>
+    <p>📍 India</p>
+
+    <form>
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Mamta Bhojanalaya | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+   
